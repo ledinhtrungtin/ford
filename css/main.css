@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -10,3 +11,21 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.disclosure {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.disclosure .disclosure__airbag h2 {
+  color: #d92e14;
+}
+
+.disclosure .disclosure__airbag button {
+  background-color: #d92e14;
+  color: #fff;
+  padding: 15px 80px;
+  border: 1px solid #d92e14;
+  border-radius: 1px;
+}
+/*# sourceMappingURL=main.css.map */

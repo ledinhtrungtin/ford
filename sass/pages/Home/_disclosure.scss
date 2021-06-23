@@ -1,0 +1,23 @@
+.disclosure {
+  max-width: 1440px;
+  margin: 0 auto;
+  .disclosure__airbag {
+    h2 {
+      color: $color-red-3;
+    }
+    // button {
+    //   background-color: $color-red-3;
+    //   color: $color-white-0;
+    // }
+    button {
+      @include styleButton(
+        $color-red-3,
+        $color-white-0,
+        $pd-1 + 5,
+        $pd-5,
+        $color-red-3,
+        $border-radius-1
+      );
+    }
+  }
+}
