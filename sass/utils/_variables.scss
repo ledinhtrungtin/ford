@@ -1,6 +1,7 @@
 // variable color
 $color-black-0: #29303b; // default
 $color-white-0: #fff; //default
+$color-white-1: #f7f7f7;
 $color-red-0: #ec5252;
 $color-red-1: #521822;
 $color-red-2: #992337;
@@ -16,14 +17,16 @@ $color-black-light: #505763;
 $color-white-cream: #f2f3f5;
 $color-black-dark: rgba(20, 23, 28, 0.1);
 $color-yellow: #f4c150;
-$color-blue: #007791;
+$color-blue-0: #007791;
+$color-blue-1: #0276b3;
 $color-trans: transparent;
 
 // variable font-size
-$fs-0: 15px; //default
-$fs-1: 13px;
-$fs-2: 20px;
-$fs-3: 24px;
+$fs-0: 13px; //default
+$fs-1: 14px; //default
+$fs-2: 15px;
+$fs-3: 20px;
+$fs-4: 24px;
 //CĂ²n 1 font-size: 36px;
 $fs-4: 40px;
 

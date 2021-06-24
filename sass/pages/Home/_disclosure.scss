@@ -1,14 +1,10 @@
 .disclosure {
-  max-width: 1440px;
-  margin: 0 auto;
+  background-color: $color-white-1;
   .disclosure__airbag {
     h2 {
       color: $color-red-3;
+      font-weight: $fw-bold-0;
     }
-    // button {
-    //   background-color: $color-red-3;
-    //   color: $color-white-0;
-    // }
     button {
       @include styleButton(
         $color-red-3,
@@ -18,6 +14,63 @@
         $color-red-3,
         $border-radius-1
       );
+      transition: 0.05s;
+      &:hover {
+        @include styleHoverButton($color-white-0, $color-red-3, $color-red-3);
+      }
     }
   }
+  .accordion {
+    .card {
+      border: none;
+      padding: 10px 0;
+      .card-header {
+        background-color: $color-white-0;
+        border-bottom: none;
+        button {
+          &:focus {
+            box-shadow: none;
+            border-color: $color-blue-1;
+            padding: 7px 0;
+            border-radius: 0;
+            transition: 0s;
+            &:hover {
+              border-color: $color-white-0;
+            }
+          }
+          span {
+            font-size: $fs-1;
+            i {
+              margin-left: $mg-1;
+              font-size: $fs-1;
+            }
+          }
+        }
+      }
+      // .collapse {
+      //   font-size: 12px;
+      //   height: 200px;
+      //   overflow-y: scroll;
+      //   .card-body {
+      //     padding: 20px 110px;
+      //     background-color: $color-white-1;
+      //   }
+      // }
+      // ::-webkit-scrollbar {
+      //   width: 10px;
+      //   background: lightgray;
+      // }
+      // ::-webkit-scrollbar-thumb {
+      //   background-color: grey;
+      // }
+      .card-body {
+        display: none;
+        padding: 20px 110px;
+        background-color: $color-white-1;
+      }
+    }
+  }
+}
+
+footer {
 }
