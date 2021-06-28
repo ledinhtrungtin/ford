@@ -9,7 +9,7 @@
       @include styleButton(
         $color-red-3,
         $color-white-0,
-        $pd-1 + 5,
+        $pd-1 + 2,
         $pd-5,
         $color-red-3,
         $border-radius-1
@@ -21,56 +21,382 @@
     }
   }
   .accordion {
-    .card {
-      border: none;
-      padding: 10px 0;
-      .card-header {
-        background-color: $color-white-0;
-        border-bottom: none;
-        button {
-          &:focus {
-            box-shadow: none;
-            border-color: $color-blue-1;
-            padding: 7px 0;
-            border-radius: 0;
-            transition: 0s;
-            &:hover {
-              border-color: $color-white-0;
-            }
-          }
-          span {
+    position: relative;
+    .accordion__header {
+      padding: 23px $pd-1;
+      background-color: $color-white-0;
+      button {
+        span {
+          font-size: $fs-1;
+          color: $color-blue-1;
+          i {
+            margin-left: $mg-1;
             font-size: $fs-1;
-            i {
-              margin-left: $mg-1;
-              font-size: $fs-1;
+            transition: 0.3s;
+          }
+        }
+        &:focus {
+          box-shadow: none;
+          border-color: $color-blue-1;
+          padding: $pd-0 0;
+          border-radius: 0;
+          transition: 0s;
+        }
+        &:hover {
+          border-color: $color-white-0;
+        }
+      }
+    }
+    .accordion__body {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      transition: 0.2s;
+
+      .body__content {
+        font-size: 12px;
+        padding: $pd-5 $pd-6;
+        background-color: $color-white-1;
+      }
+    }
+    &.active {
+      .accordion__header {
+        button {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .accordion__body {
+        height: 200px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background: lightgray;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: grey;
+        }
+      }
+    }
+  }
+}
+//footer
+footer {
+  .footer__resdident {
+    padding: $pd-4 0 $pd-2;
+
+    background-color: $color-blue-2;
+    h2 {
+      color: $color-white-0;
+    }
+    p {
+      color: $color-white-0;
+      a {
+        font-weight: 600;
+        color: $color-blue-1;
+      }
+    }
+    button {
+      @include styleButton(
+        $color-blue-1,
+        $color-white-0,
+        $pd-1 + 2,
+        $pd-1 + 5,
+        $color-blue-1,
+        $border-radius-1
+      );
+      &:hover {
+        background-color: $color-white-0;
+        color: $color-blue-2;
+        border: 1px solid $color-white-0;
+      }
+    }
+  }
+  .search {
+    padding: 35px 0;
+    background-color: #333333;
+    .search__content {
+      display: flex;
+      justify-content: space-between;
+
+      .input-group {
+        color: $color-white-0;
+        &.active {
+          input {
+            border: 1px solid $color-blue-1;
+          }
+        }
+        span {
+          font-size: 20px;
+          position: absolute;
+          top: 10px;
+          left: 10px;
+        }
+        input {
+          border: none;
+          background: transparent;
+          outline: none;
+          width: 280px;
+          padding: 11px 5px 5px 40px;
+          &::-webkit-input-placeholder {
+            font-size: 26px;
+            color: $color-white-0;
+          }
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        margin: auto 0;
+        li {
+          color: $color-white-0;
+
+          margin-left: $mg-1;
+          a {
+            text-decoration: none;
+            color: #a7a7a7;
+            &.active {
+              color: $color-white-0;
+            }
+            &:hover {
+              color: $color-white-0;
             }
           }
         }
       }
-      // .collapse {
-      //   font-size: 12px;
-      //   height: 200px;
-      //   overflow-y: scroll;
-      //   .card-body {
-      //     padding: 20px 110px;
-      //     background-color: $color-white-1;
-      //   }
-      // }
-      // ::-webkit-scrollbar {
-      //   width: 10px;
-      //   background: lightgray;
-      // }
-      // ::-webkit-scrollbar-thumb {
-      //   background-color: grey;
-      // }
-      .card-body {
-        display: none;
-        padding: 20px 110px;
-        background-color: $color-white-1;
+    }
+  }
+  .footer__main {
+    padding: 50px 0;
+    background-color: $color-gray-7;
+    .footer__content {
+      .item {
+        h5 {
+          color: $color-white-0;
+        }
+        ul {
+          margin-top: 20px;
+          li {
+            a {
+              text-decoration: none;
+              color: #a7a7a7;
+              font-size: 15px;
+              &:hover {
+                color: $color-white-0;
+              }
+            }
+          }
+        }
+      }
+      .footer__accordion {
+        // .accordion__content {
+        .footer-card {
+          &.active {
+            .card-header {
+              border: 1px solid $color-blue-1;
+              &:hover {
+                border: 1px solid $color-gray-7;
+              }
+            }
+            .card-body {
+              height: 70px;
+            }
+          }
+          .card-header {
+            background-color: $color-gray-7;
+            button {
+              box-shadow: none;
+              color: $color-white-0;
+              display: flex;
+              justify-content: space-between;
+            }
+          }
+          .card-body {
+            padding: 0;
+            position: relative;
+            height: 0;
+            border-top: 1px solid #484646;
+            overflow: hidden;
+            transition: 0.2s;
+            padding: 0 30px;
+            .card-content {
+              color: #a7a7a7;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__secondary {
+    background-color: #102b4e;
+    padding: 40px 0;
+    .footer__share {
+      display: flex;
+      // flex-direction: row;
+      justify-content: space-between;
+      .footer__update {
+        ul {
+          li {
+            margin-right: 50px;
+
+            .icon {
+              // width: 40px;
+              // height: 40px;
+              background-color: #2096cd;
+              border-radius: 50px;
+              color: $color-white-0;
+              padding: 12px;
+            }
+            .text {
+              font-size: 20px;
+              color: #2096cd;
+            }
+          }
+        }
+      }
+      .social-links {
+        display: flex;
+        align-items: center;
+        p {
+          margin-right: 40px;
+          margin-bottom: 0;
+          color: $color-white-0;
+          font-size: 13px;
+        }
+        ul {
+          margin-bottom: 0;
+
+          list-style: none;
+          li {
+            // & + span {
+            //   width: 40px;
+            //   height: 40px;
+            // }
+
+            display: inline;
+            a {
+              text-decoration: none;
+              padding: 10px;
+              i {
+                color: $color-white-0;
+              }
+            }
+            .facebook {
+              background-color: #3c5a99;
+            }
+            .twitter {
+              background-color: #1da1f2;
+            }
+            .youtube {
+              background-color: #ff0000;
+            }
+            .instagram {
+              background-color: #db2c74;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__last {
+    background-color: #f7f7f7;
+    .change {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .language {
+        position: relative;
+        i {
+          position: absolute;
+          top: 0px;
+          color: #2096cd;
+          font-size: 22px;
+        }
+        span {
+          a {
+            padding-left: 40px;
+            color: #2096cd;
+            text-decoration: none;
+          }
+        }
+        &:hover i,
+        &:hover span a {
+          color: #102b4e;
+        }
+      }
+
+      .img--ford {
+        width: 100px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .motor {
+      font-size: 14px;
+      .company {
+        a {
+          text-decoration: none;
+          color: #555555;
+        }
+      }
+      ul {
+        list-style: none;
+        li {
+          display: inline;
+          margin-right: 20px;
+          line-height: 30px;
+          a {
+            text-decoration: none;
+            white-space: nowrap;
+            color: #555555;
+          }
+          &:hover a {
+            color: #102b4e;
+          }
+        }
+        .evidon {
+          position: relative;
+          a {
+            span {
+              padding-left: 25px;
+            }
+            img {
+              position: absolute;
+              top: 0;
+              left: 6px;
+            }
+          }
+        }
       }
     }
   }
 }
 
-footer {
+.container-fluid {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+//responsive(max-width)
+@include responsive("large") {
+  .footer__main {
+    .footer__content {
+      .finance,
+      .owner,
+      .experience {
+        display: none;
+      }
+    }
+  }
+}
+@include responsive("medium") {
+  .footer__main {
+    .footer__content {
+      .shoppings {
+        display: none;
+      }
+    }
+  }
 }
