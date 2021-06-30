@@ -6,5 +6,459 @@
 
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.5s;
+}
+header .topnav {
+  background-color: #f3f3f3;
+  padding: 5px 30px;
+  z-index: 999;
+}
+header .topnav .topnav__item .item__logo {
+  height: 30px;
+  width: 50px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .topnav .topnav__item span {
+  font-size: 12px;
+  color: #102b4e;
+  border-right: 1px solid;
+  padding-right: 10px;
+}
+header .nav {
+  padding: 10px 30px;
+  z-index: 999;
+  background-color: #fff;
+}
+header .nav .nav__logo {
+  width: 150px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .nav .nav__list .list__item {
+  font-size: 14px;
+  padding: 10px 10px;
+  color: #0276b3;
+  font-weight: bold;
+  cursor: pointer;
+}
+header .nav .nav__list .list__item.listActive {
+  border-bottom: 2px solid;
+}
+header .list__listCar {
+  position: absolute;
+  height: 82vh;
+  padding: 0 30px;
+  width: 100%;
+  transform: translateY(-100%);
+  background-color: #fff;
+  z-index: -1;
+  transition: all 0.5s;
+}
+header .list__listCar .listCar {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+  transform: translateY(-100%);
+}
+header .list__listCar .listCar .car__item {
+  width: 16.666%;
+  padding-top: 100px;
+}
+header .list__listCar .listCar .car__item .car__logo {
+  width: 80%;
+  height: 150px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+header .list__listCar .listCar .car__item .car__name {
+  color: #102b4e;
+  font-size: 14px;
+  cursor: pointer;
+}
+header .list__listCar .listCar .car__item .car__price {
+  font-size: 12px;
+  color: gray;
+}
+header .list__listCar .listCar .car__item .car__option {
+  color: #007791;
+  border-bottom: 1px solid;
+}
+
+.banner {
+  position: relative;
+}
+.banner .banner__img {
+  background-image: url(/img/banner/anh2.png);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+}
+.banner .banner__content {
+  top: 0;
+  padding-left: 100px;
+  position: absolute;
+  color: white;
+}
+.banner .banner__content h1 {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.disclosure {
+  background-color: #f7f7f7;
+}
+.disclosure .disclosure__airbag h2 {
+  color: #d92e14;
+  font-weight: 600;
+}
+.disclosure .disclosure__airbag button {
+  background-color: #d92e14;
+  color: #fff;
+  padding: 12px 80px;
+  border: 1px solid #d92e14;
+  border-radius: 1px;
+  transition: 0.05s;
+}
+.disclosure .disclosure__airbag button:hover {
+  background-color: #fff;
+  color: #d92e14;
+  border-color: #d92e14;
+}
+.disclosure .accordion {
+  position: relative;
+}
+.disclosure .accordion .accordion__header {
+  padding: 23px 10px;
+  background-color: #fff;
+}
+.disclosure .accordion .accordion__header button span {
+  font-size: 14px;
+  color: #0276b3;
+}
+.disclosure .accordion .accordion__header button span i {
+  margin-left: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.disclosure .accordion .accordion__header button:focus {
+  box-shadow: none;
+  border-color: #0276b3;
+  padding: 7px 0;
+  border-radius: 0;
+  transition: 0s;
+}
+.disclosure .accordion .accordion__header button:hover {
+  border-color: #fff;
+}
+.disclosure .accordion .accordion__body {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.disclosure .accordion .accordion__body .body__content {
+  font-size: 12px;
+  padding: 80px 100px;
+  background-color: #f7f7f7;
+}
+.disclosure .accordion.active .accordion__header button i {
+  transform: rotate(180deg);
+}
+.disclosure .accordion.active .accordion__body {
+  height: 200px;
+  overflow-y: scroll;
+}
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar {
+  width: 10px;
+  background: lightgray;
+}
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+footer .footer__resdident {
+  padding: 40px 0 20px;
+  background-color: #092a46;
+}
+footer .footer__resdident h2 {
+  color: #fff;
+}
+footer .footer__resdident p {
+  color: #fff;
+}
+footer .footer__resdident p a {
+  font-weight: 600;
+  color: #0276b3;
+}
+footer .footer__resdident button {
+  background-color: #0276b3;
+  color: #fff;
+  padding: 12px 15px;
+  border: 1px solid #0276b3;
+  border-radius: 1px;
+}
+footer .footer__resdident button:hover {
+  background-color: #fff;
+  color: #092a46;
+  border: 1px solid #fff;
+}
+footer .search {
+  padding: 35px 0;
+  background-color: #333333;
+}
+footer .search .search__content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .search .search__content .input-group {
+  color: #fff;
+}
+footer .search .search__content .input-group.active input {
+  border: 1px solid #0276b3;
+}
+footer .search .search__content .input-group span {
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+footer .search .search__content .input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 280px;
+  padding: 11px 5px 5px 40px;
+}
+footer .search .search__content .input-group input::-webkit-input-placeholder {
+  font-size: 26px;
+  color: #fff;
+}
+footer .search .search__content ul {
+  list-style: none;
+  display: flex;
+  margin: auto 0;
+}
+footer .search .search__content ul li {
+  color: #fff;
+  margin-left: 10px;
+}
+footer .search .search__content ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+}
+footer .search .search__content ul li a.active {
+  color: #fff;
+}
+footer .search .search__content ul li a:hover {
+  color: #fff;
+}
+footer .footer__main {
+  padding: 50px 0;
+  background-color: #242424;
+}
+footer .footer__main .footer__content .item h5 {
+  color: #fff;
+}
+footer .footer__main .footer__content .item ul {
+  margin-top: 20px;
+}
+footer .footer__main .footer__content .item ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+  font-size: 15px;
+}
+footer .footer__main .footer__content .item ul li a:hover {
+  color: #fff;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header {
+  border: 1px solid #0276b3;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header:hover {
+  border: 1px solid #242424;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card.active .card-body {
+  height: 70px;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card .card-header {
+  background-color: #242424;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card .card-header button {
+  box-shadow: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card .card-body {
+  padding: 0;
+  position: relative;
+  height: 0;
+  border-top: 1px solid #484646;
+  overflow: hidden;
+  transition: 0.2s;
+  padding: 0 30px;
+}
+footer .footer__main .footer__content .footer__accordion .footer-card .card-body .card-content {
+  color: #a7a7a7;
+}
+footer .footer__secondary {
+  background-color: #102b4e;
+  padding: 40px 0;
+}
+footer .footer__secondary .footer__share {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__secondary .footer__share .footer__update ul li {
+  margin-right: 50px;
+}
+footer .footer__secondary .footer__share .footer__update ul li .icon {
+  background-color: #2096cd;
+  border-radius: 50px;
+  color: #fff;
+  padding: 12px;
+}
+footer .footer__secondary .footer__share .footer__update ul li .text {
+  font-size: 20px;
+  color: #2096cd;
+}
+footer .footer__secondary .footer__share .social-links {
+  display: flex;
+  align-items: center;
+}
+footer .footer__secondary .footer__share .social-links p {
+  margin-right: 40px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: 13px;
+}
+footer .footer__secondary .footer__share .social-links ul {
+  margin-bottom: 0;
+  list-style: none;
+}
+footer .footer__secondary .footer__share .social-links ul li {
+  display: inline;
+}
+footer .footer__secondary .footer__share .social-links ul li a {
+  text-decoration: none;
+  padding: 10px;
+}
+footer .footer__secondary .footer__share .social-links ul li a i {
+  color: #fff;
+}
+footer .footer__secondary .footer__share .social-links ul li .facebook {
+  background-color: #3c5a99;
+}
+footer .footer__secondary .footer__share .social-links ul li .twitter {
+  background-color: #1da1f2;
+}
+footer .footer__secondary .footer__share .social-links ul li .youtube {
+  background-color: #ff0000;
+}
+footer .footer__secondary .footer__share .social-links ul li .instagram {
+  background-color: #db2c74;
+}
+footer .footer__last {
+  background-color: #f7f7f7;
+}
+footer .footer__last .change {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__last .change .language {
+  position: relative;
+}
+footer .footer__last .change .language i {
+  position: absolute;
+  top: 0px;
+  color: #2096cd;
+  font-size: 22px;
+}
+footer .footer__last .change .language span a {
+  padding-left: 40px;
+  color: #2096cd;
+  text-decoration: none;
+}
+footer .footer__last .change .language:hover i, footer .footer__last .change .language:hover span a {
+  color: #102b4e;
+}
+footer .footer__last .change .img--ford {
+  width: 100px;
+}
+footer .footer__last .change .img--ford img {
+  width: 100%;
+}
+footer .footer__last .motor {
+  font-size: 14px;
+}
+footer .footer__last .motor .company a {
+  text-decoration: none;
+  color: #555555;
+}
+footer .footer__last .motor ul {
+  list-style: none;
+}
+footer .footer__last .motor ul li {
+  display: inline;
+  margin-right: 20px;
+  line-height: 30px;
+}
+footer .footer__last .motor ul li a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #555555;
+}
+footer .footer__last .motor ul li:hover a {
+  color: #102b4e;
+}
+footer .footer__last .motor ul .evidon {
+  position: relative;
+}
+footer .footer__last .motor ul .evidon a span {
+  padding-left: 25px;
+}
+footer .footer__last .motor ul .evidon a img {
+  position: absolute;
+  top: 0;
+  left: 6px;
+}
+
+.container-fluid {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer__main .footer__content .finance,
+.footer__main .footer__content .owner,
+.footer__main .footer__content .experience {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer__main .footer__content .shoppings {
+    display: none;
+  }
 }
