@@ -12,100 +12,6 @@ body {
   margin: 0 auto;
 }
 
-.disclosure {
-  background-color: #f7f7f7;
-}
-
-.disclosure .disclosure__airbag h2 span {
-  color: #d92e14;
-  font-size: 3.3rem;
-}
-
-.disclosure .disclosure__airbag button {
-  background-color: #d92e14;
-  color: #fff;
-  padding: 12px 50px;
-  border: 1px solid #d92e14;
-  border-radius: 1px;
-  -webkit-transition: 0.05s;
-  transition: 0.05s;
-}
-
-.disclosure .disclosure__airbag button:hover {
-  background-color: #fff;
-  color: #d92e14;
-  border-color: #d92e14;
-}
-
-.disclosure .accordion {
-  cursor: pointer;
-  position: relative;
-}
-
-.disclosure .accordion .accordion__header {
-  padding: 23px 10px;
-  background-color: #fff;
-}
-
-.disclosure .accordion .accordion__header button span {
-  font-size: 14px;
-  color: #0276b3;
-}
-
-.disclosure .accordion .accordion__header button span i {
-  margin-left: 10px;
-  font-size: 14px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.disclosure .accordion .accordion__header button:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border-color: #0276b3;
-  padding: 7px 0;
-  border-radius: 0;
-  -webkit-transition: 0s;
-  transition: 0s;
-}
-
-.disclosure .accordion .accordion__header button:hover {
-  border-color: #fff;
-}
-
-.disclosure .accordion .accordion__body {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.disclosure .accordion .accordion__body .body__content {
-  font-size: 12px;
-  padding: 50px 100px;
-  background-color: #f7f7f7;
-}
-
-.disclosure .accordion.active .accordion__header button i {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.disclosure .accordion.active .accordion__body {
-  height: 200px;
-  overflow-y: scroll;
-}
-
-.disclosure .accordion.active .accordion__body::-webkit-scrollbar {
-  width: 10px;
-  background: lightgray;
-}
-
-.disclosure .accordion.active .accordion__body::-webkit-scrollbar-thumb {
-  background-color: grey;
-}
-
 footer .footer__resdident {
   padding: 40px 0 20px;
   background-color: #092a46;
@@ -446,22 +352,6 @@ footer .footer__last .motor ul .evidon a img {
   left: 6px;
 }
 
-.accordion .card .card-header h2 button {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.container-fluid {
-  padding-left: 95px;
-  padding-right: 95px;
-}
-
-@media (max-width: 1439px) {
-  .container-fluid {
-    padding: 0 45px;
-  }
-}
-
 @media (max-width: 1023px) {
   footer .footer__secondary {
     padding: 70px 0;
@@ -495,15 +385,9 @@ footer .footer__last .motor ul .evidon a img {
   .comment-card {
     display: none;
   }
-  .container-fluid {
-    padding: 0 30px;
-  }
 }
 
 @media (max-width: 767px) {
-  .container-fluid {
-    padding: 0 25px;
-  }
   .input-group {
     display: none;
   }
@@ -583,6 +467,123 @@ footer .footer__last .motor ul .evidon a img {
   }
   footer .footer__last .container-fluid .motor ul li {
     display: block;
+  }
+}
+
+.disclosure {
+  background-color: #f7f7f7;
+}
+
+.disclosure .disclosure__airbag h2 span {
+  color: #d92e14;
+  font-size: 3.3rem;
+}
+
+.disclosure .disclosure__airbag button {
+  background-color: #d92e14;
+  color: #fff;
+  padding: 12px 50px;
+  border: 1px solid #d92e14;
+  border-radius: 1px;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+}
+
+.disclosure .disclosure__airbag button:hover {
+  background-color: #fff;
+  color: #d92e14;
+  border-color: #d92e14;
+}
+
+.disclosure .accordion {
+  cursor: pointer;
+  position: relative;
+}
+
+.disclosure .accordion .accordion__header {
+  padding: 23px 10px;
+  background-color: #fff;
+}
+
+.disclosure .accordion .accordion__header button span {
+  font-size: 14px;
+  color: #0276b3;
+}
+
+.disclosure .accordion .accordion__header button span i {
+  margin-left: 10px;
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.disclosure .accordion .accordion__header button:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #0276b3;
+  padding: 7px 0;
+  border-radius: 0;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+.disclosure .accordion .accordion__header button:hover {
+  border-color: #fff;
+}
+
+.disclosure .accordion .accordion__body {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.disclosure .accordion .accordion__body .body__content {
+  font-size: 12px;
+  padding: 50px 100px;
+  background-color: #f7f7f7;
+}
+
+.disclosure .accordion.active .accordion__header button i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.disclosure .accordion.active .accordion__body {
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar {
+  width: 10px;
+  background: lightgray;
+}
+
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+.container-fluid {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+
+@media (max-width: 1439px) {
+  .container-fluid {
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container-fluid {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 25px;
   }
 }
 
