@@ -39,7 +39,8 @@
     <section class="grid"></section>
     <section class="disclosure">
         <div class="disclosure__airbag p-5 text-center">
-            <h2>Airbag Recalls</h2>
+            <!-- <span>Airbag Recalls</span> -->
+            <h2><span>Airbag Recalls</span></h2>
             <button type="button" class="btn mt-5 mb-4">Learn More</button>
         </div>
         <div class="accordion">
@@ -191,7 +192,7 @@
             <span class="fa fa-search"></span>
             <input type="text" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping">
           </div>
-          <ul class="ml-auto">
+          <ul >
             <li>Popular</li>
             <li><a href="">Electric</a></li>
             <li><a href="">Vehicles</a></li>
@@ -205,7 +206,7 @@
         <div class="footer__content container-fluid row">
           <div class="item col-md-3 col-lg vehicle">
             <h5>All Vehicles</h5>
-            <ul>
+            <ul class="vehicle-detail">
               <li><a href="">SUVs &amp; Crossovers</a></li>
               <li><a href="">Trucks &amp; Vans</a></li>
               <li><a href="">Cars</a></li>
@@ -288,8 +289,156 @@
               <li><a href="">Ford Telematics</a></li>
             </ul>
           </div>
+          <!-- <div class="footer__accordion col-md-6 d-lg-none">
+ -->
+          <div class="accordion col-md-6 d-lg-none" id="accordionExample">
+            <div class="card d-md-none">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left align-items-between" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <span>Shopping tools</span>
+                  <i class="fa fa-chevron-down"></i>
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body" style="background-color: #242424; border-top: 1px solid #484646; padding: 20px;">
+                  <ul class="vehicle-detail list-unstyled">
+                    <li><a href="">SUVs &amp; Crossovers</a></li>
+                    <li><a href="">Trucks &amp; Vans</a></li>
+                    <li><a href="">Cars</a></li>
+                    <li><a href="">Electrified</a></li>
+                    <li><a href="">Commercial Vehicles</a></li>
+                    <li><a href="">Future Vehicles</a></li>
+                    <li><a href="">Certified Used</a></li>
+                    <li><a href="">Fleet Vehicles</a></li>
+                    <li><a href="">All Vehicles</a></li>
+                    <li><a href="">Performance Vehicle</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <span>Finance</span>
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body" style="background-color: #242424; border-top: 1px solid #484646; padding: 20px;">
+                  <ul class="list-unstyled">
+                    <li><a href="">Ford Credit Home</a></li>
+                    <li><a href="">Why Ford Credit</a></li>
+                    <li><a href="">Finance Options</a></li>
+                    <li><a href="">Payment Calculator</a></li>
+                    <li><a href="">Credit Education</a></li>
+                    <li><a href="">Customer Support</a></li>
+                    <li><a href="">Ford Promise</a></li>
+                    <li><a href="">Apply Online</a></li>
+                    <li><a href="">Ford Credit Account</a></li>
+                    <li><a href="">Ford Insure</a></li>
+                    <li><a href="">Ford Interest Advantage</a></li>
+                    <li><a href="">Investor Center</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <span>Owner</span>
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body" style="background-color: #242424; border-top: 1px solid #484646; padding: 20px;">
+                  <ul class="list-unstyled">
+                    <li><a href="">Owner Home</a></li>
+                    <li><a href="">Schedule Service</a></li>
+                    <li><a href="">Your Warranty</a></li>
+                    <li><a href="">Service Coupons &amp; Offers</a></li>
+                    <li><a href="">Redeem &amp; Rebate</a></li>
+                    <li><a href="">SYNC &amp; Technology</a></li>
+                    <li><a href="">SYNC Software Updates</a></li>
+                    <li><a href="">Owner Manuals</a></li>
+                    <li><a href="">Locate a Dealer</a></li>
+                    <li><a href="">Ford Parts</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Roadside Assistance</a></li>
+                    <li><a href="">Ford Protect</a></li>
+                    <li><a href="">Safety Recalls</a></li>
+                    <li><a href="">Airbag Recalls</a></li>
+                    <li><a href="">Ask Ford</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                  <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span>Experience Ford</span>
+                    <i class="fa fa-chevron-down"></i>
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body" style="background-color: #242424; border-top: 1px solid #484646; padding: 20px 0 0 40px;">
+                  <ul class="list-unstyled">
+                    <li><a href="">Owner Home</a></li>
+                    <li><a href="">Schedule Service</a></li>
+                    <li><a href="">Your Warranty</a></li>
+                    <li><a href="">Service Coupons &amp; Offers</a></li>
+                    <li><a href="">Redeem &amp; Rebate</a></li>
+                    <li><a href="">SYNC &amp; Technology</a></li>
+                    <li><a href="">SYNC Software Updates</a></li>
+                    <li><a href="">Owner Manuals</a></li>
+                    <li><a href="">Locate a Dealer</a></li>
+                    <li><a href="">Ford Parts</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Roadside Assistance</a></li>
+                    <li><a href="">Ford Protect</a></li>
+                    <li><a href="">Safety Recalls</a></li>
+                    <li><a href="">Airbag Recalls</a></li>
+                    <li><a href="">Ask Ford</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
   
-          <div class="footer__accordion col-md-6 d-lg-none">
+          <!-- <div class="footer__accordion col-md-6 d-lg-none">
+            <div class="footer-card d-md-none">
+              <div class="card-header">
+                  <button class="btn btn-block text-left collapsed" type="button">
+                    <span>Shopping tools</span>
+                  <i class="fa fa-chevron-down"></i>
+                  </button>
+              </div>
+              <div class="card-body">
+                <div class="card-content">
+                  <ul class="vehicle-detail">
+                    <li><a href="">SUVs &amp; Crossovers</a></li>
+                    <li><a href="">Trucks &amp; Vans</a></li>
+                    <li><a href="">Cars</a></li>
+                    <li><a href="">Electrified</a></li>
+                    <li><a href="">Commercial Vehicles</a></li>
+                    <li><a href="">Future Vehicles</a></li>
+                    <li><a href="">Certified Used</a></li>
+                    <li><a href="">Fleet Vehicles</a></li>
+                    <li><a href="">All Vehicles</a></li>
+                    <li><a href="">Performance Vehicle</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
               <div class="footer-card">
                 <div class="card-header">
                     <button class="btn btn-block text-left collapsed" type="button">
@@ -299,7 +448,20 @@
                 </div>
                 <div class="card-body">
                   <div class="card-content">
-                    Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    <ul>
+                      <li><a href="">Ford Credit Home</a></li>
+                      <li><a href="">Why Ford Credit</a></li>
+                      <li><a href="">Finance Options</a></li>
+                      <li><a href="">Payment Calculator</a></li>
+                      <li><a href="">Credit Education</a></li>
+                      <li><a href="">Customer Support</a></li>
+                      <li><a href="">Ford Promise</a></li>
+                      <li><a href="">Apply Online</a></li>
+                      <li><a href="">Ford Credit Account</a></li>
+                      <li><a href="">Ford Insure</a></li>
+                      <li><a href="">Ford Interest Advantage</a></li>
+                      <li><a href="">Investor Center</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -313,7 +475,24 @@
                 </div>
                 <div class="card-body">
                   <div class="card-content">
-                    Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    <ul>
+                      <li><a href="">Owner Home</a></li>
+                      <li><a href="">Schedule Service</a></li>
+                      <li><a href="">Your Warranty</a></li>
+                      <li><a href="">Service Coupons &amp; Offers</a></li>
+                      <li><a href="">Redeem &amp; Rebate</a></li>
+                      <li><a href="">SYNC &amp; Technology</a></li>
+                      <li><a href="">SYNC Software Updates</a></li>
+                      <li><a href="">Owner Manuals</a></li>
+                      <li><a href="">Locate a Dealer</a></li>
+                      <li><a href="">Ford Parts</a></li>
+                      <li><a href="">Contact Us</a></li>
+                      <li><a href="">Roadside Assistance</a></li>
+                      <li><a href="">Ford Protect</a></li>
+                      <li><a href="">Safety Recalls</a></li>
+                      <li><a href="">Airbag Recalls</a></li>
+                      <li><a href="">Ask Ford</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -327,18 +506,33 @@
                 </div>
                 <div class="card-body">
                   <div class="card-content">
-                    And lastly, the placeholder content for the third and final accordion panel. This panel is hidden by default.
+                    <ul>
+                      <li><a href="">Corporate</a></li>
+                      <li><a href="">Careers</a></li>
+                      <li><a href="">Investors</a></li>
+                      <li><a href="">Company News</a></li>
+                      <li><a href="">About Ford</a></li>
+                      <li><a href="">Racing</a></li>
+                      <li><a href="">Accessories Store</a></li>
+                      <li><a href="">Warriors in Pink</a></li>
+                      <li><a href="">Ford Merchandise</a></li>
+                      <li><a href="">Ford Motor Company Fund</a></li>
+                      <li><a href="">SYNC</a></li>
+                      <li><a href="">FordPass</a></li>
+                      <li><a href="">Ford Co-Pilot360 Technolog</a></li>
+                      <li><a href="">Ford Telematics</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="footer__secondary">
         <div class="footer__share container-fluid">
           <nav class="footer__update  navbar-expand-lg">
             <ul class="navbar-nav ">
-              <li class="nav-item">
+              <li class="nav-item get">
                 <a href="">
                     <span class="fa fa-envelope icon" aria-hidden="true"></span>
                     <span class="text">Get Updates</span>
@@ -399,7 +593,7 @@
           <div class="company">
             <a href="http://corporate.ford.com/homepage.html">© 2021 Ford Motor Company</a>
           </div>
-          <ul>
+          <ul class="col-md-7 col-lg-10">
             <li><a href="http://www.ford.com/help/sitemap/">Site Map</a></li>
             <li><a href="http://www.ford.com/help/glossary/">Glossary</a></li>
             <li><a href="#">Site Feedback</a></li>
@@ -418,8 +612,6 @@
       </div>
 
     </footer>
-
-
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

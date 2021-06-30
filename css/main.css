@@ -16,15 +16,15 @@ body {
   background-color: #f7f7f7;
 }
 
-.disclosure .disclosure__airbag h2 {
+.disclosure .disclosure__airbag h2 span {
   color: #d92e14;
-  font-weight: 600;
+  font-size: 3.3rem;
 }
 
 .disclosure .disclosure__airbag button {
   background-color: #d92e14;
   color: #fff;
-  padding: 12px 80px;
+  padding: 12px 50px;
   border: 1px solid #d92e14;
   border-radius: 1px;
   -webkit-transition: 0.05s;
@@ -38,6 +38,7 @@ body {
 }
 
 .disclosure .accordion {
+  cursor: pointer;
   position: relative;
 }
 
@@ -82,7 +83,7 @@ body {
 
 .disclosure .accordion .accordion__body .body__content {
   font-size: 12px;
-  padding: 80px 100px;
+  padding: 50px 100px;
   background-color: #f7f7f7;
 }
 
@@ -169,9 +170,11 @@ footer .search .search__content .input-group span {
 footer .search .search__content .input-group input {
   border: none;
   background: transparent;
+  color: white;
+  font-size: 25px;
   outline: none;
   width: 280px;
-  padding: 11px 5px 5px 40px;
+  padding: 2px 0 5px 40px;
 }
 
 footer .search .search__content .input-group input::-webkit-input-placeholder {
@@ -215,7 +218,7 @@ footer .footer__main .footer__content .item h5 {
 }
 
 footer .footer__main .footer__content .item ul {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 footer .footer__main .footer__content .item ul li a {
@@ -228,47 +231,46 @@ footer .footer__main .footer__content .item ul li a:hover {
   color: #fff;
 }
 
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header {
-  border: 1px solid #0276b3;
+footer .footer__main .footer__content .accordion .card {
+  border: none;
+  border-bottom: 1px solid #484646;
 }
 
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header:hover {
-  border: 1px solid #242424;
-}
-
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-body {
-  height: 70px;
-}
-
-footer .footer__main .footer__content .footer__accordion .footer-card .card-header {
+footer .footer__main .footer__content .accordion .card .card-header {
   background-color: #242424;
+  border-bottom: 1px solid #484646;
 }
 
-footer .footer__main .footer__content .footer__accordion .footer-card .card-header button {
+footer .footer__main .footer__content .accordion .card .card-header h2 button {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: row;
+      -ms-flex: row;
+          flex: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-footer .footer__main .footer__content .footer__accordion .footer-card .card-body {
-  padding: 0;
-  position: relative;
-  height: 0;
-  border-top: 1px solid #484646;
-  overflow: hidden;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  padding: 0 30px;
+footer .footer__main .footer__content .accordion .card .collapse .card-body {
+  padding: 20px;
 }
 
-footer .footer__main .footer__content .footer__accordion .footer-card .card-body .card-content {
+footer .footer__main .footer__content .accordion .card .collapse .card-body ul li {
+  cursor: pointer;
+}
+
+footer .footer__main .footer__content .accordion .card .collapse .card-body ul li a {
+  text-decoration: none;
   color: #a7a7a7;
+}
+
+footer .footer__main .footer__content .accordion .card .collapse .card-body ul li:hover a {
+  color: #fff;
 }
 
 footer .footer__secondary {
@@ -444,22 +446,153 @@ footer .footer__last .motor ul .evidon a img {
   left: 6px;
 }
 
+.accordion .card .card-header h2 button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .container-fluid {
   padding-left: 95px;
   padding-right: 95px;
 }
 
-@media screen and (max-width: 991px) {
+@media (max-width: 1439px) {
+  .container-fluid {
+    padding: 0 45px;
+  }
+}
+
+@media (max-width: 1023px) {
+  footer .footer__secondary {
+    padding: 70px 0;
+  }
+  footer .footer__secondary .footer__share .footer__update ul {
+    display: block;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .comment-card {
+    padding: 40px 0 0 40px;
+  }
+  footer .footer__secondary .footer__share .social-links {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .social-links p {
+    position: absolute;
+    top: -46px;
+    left: -7px;
+  }
+}
+
+@media (max-width: 991px) {
   .footer__main .footer__content .finance,
   .footer__main .footer__content .owner,
   .footer__main .footer__content .experience {
     display: none;
   }
+  .comment-card {
+    display: none;
+  }
+  .container-fluid {
+    padding: 0 30px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 25px;
+  }
+  .input-group {
+    display: none;
+  }
+  .search .search__content ul {
+    margin-left: 0;
+  }
+  footer .footer__secondary {
+    padding: 40px 0 70px;
+  }
+  footer .footer__secondary .footer__share {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .footer__update ul {
+    display: block;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get {
+    padding: 20px 0;
+    border-bottom: 1px solid #948e8e;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a {
+    text-decoration: none;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a .icon {
+    font-size: 15px;
+    padding: 7px;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a .text {
+    font-size: 15px;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .comment-card {
+    padding: 40px 0 0 40px;
+  }
+  footer .footer__secondary .footer__share .social-links {
+    position: relative;
+    margin-top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .social-links p {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+  }
+  footer .footer__secondary .footer__share .social-links ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .footer__main .footer__content .shoppings {
     display: none;
   }
+  .footer__main .footer__content .vehicle .vehicle-detail {
+    padding-left: 30px;
+    border-top: 1px solid #484646;
+  }
+  footer .footer__last {
+    padding: 30px 0 70px;
+  }
+  footer .footer__last .container-fluid {
+    position: relative;
+  }
+  footer .footer__last .container-fluid .change .img--ford {
+    position: absolute;
+    bottom: -65px;
+    left: 22px;
+  }
+  footer .footer__last .container-fluid .motor .company {
+    padding-top: 30px;
+  }
+  footer .footer__last .container-fluid .motor .company a {
+    padding-left: 15px;
+  }
+  footer .footer__last .container-fluid .motor ul li {
+    display: block;
+  }
+}
+
+@media (max-width: 479px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.disclosure .disclosure__airbag h2 span {
+  font-size: 35px;
 }
 /*# sourceMappingURL=main.css.map */

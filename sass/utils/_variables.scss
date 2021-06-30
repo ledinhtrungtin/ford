@@ -49,7 +49,7 @@ $pd-2: 20px;
 $pd-3: 30px;
 $pd-4: 40px;
 $pd-5: 50px;
-$pd-5: 80px;
+$pd-6: 80px;
 $pd-6: 100px;
 //variable line-height
 $line-height-0: 1.43; //default
@@ -62,8 +62,8 @@ $fw-bold: bold;
 
 //break points
 $breakpoints: (
-  "extra-large": 1199px,
-  "large": 991px,
-  "medium": 767px,
-  "small": 575px,
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
 );

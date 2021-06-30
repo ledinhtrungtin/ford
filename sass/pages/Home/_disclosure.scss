@@ -1,9 +1,14 @@
 .disclosure {
   background-color: $color-white-1;
   .disclosure__airbag {
+    // display: flex;
+    // span
     h2 {
-      color: $color-red-3;
-      font-weight: $fw-bold-0;
+      span {
+        color: $color-red-3;
+        // font-weight: $fw-bold-0;
+        font-size: 3.3rem;
+      }
     }
     button {
       @include styleButton(
@@ -21,6 +26,7 @@
     }
   }
   .accordion {
+    cursor: pointer;
     position: relative;
     .accordion__header {
       padding: 23px $pd-1;
@@ -136,9 +142,11 @@ footer {
         input {
           border: none;
           background: transparent;
+          color: white;
+          font-size: 25px;
           outline: none;
           width: 280px;
-          padding: 11px 5px 5px 40px;
+          padding: 2px 0 5px 40px;
           &::-webkit-input-placeholder {
             font-size: 26px;
             color: $color-white-0;
@@ -176,7 +184,8 @@ footer {
           color: $color-white-0;
         }
         ul {
-          margin-top: 20px;
+          // margin-top: 20px;
+          padding-top: 20px;
           li {
             a {
               text-decoration: none;
@@ -189,39 +198,86 @@ footer {
           }
         }
       }
-      .footer__accordion {
-        // .accordion__content {
-        .footer-card {
-          &.active {
-            .card-header {
-              border: 1px solid $color-blue-1;
-              &:hover {
-                border: 1px solid $color-gray-7;
-              }
-            }
-            .card-body {
-              height: 70px;
-            }
-          }
+      // .footer__accordion {
+
+      //   .footer-card {
+      //     &.active {
+      //       .card-header {
+      //         border: 1px solid $color-blue-1;
+      //         &:hover {
+      //           border: 1px solid $color-gray-7;
+      //         }
+      //       }
+      //       .card-body {
+      //         height: 100%;
+      //       }
+      //     }
+      //     .card-header {
+      //       background-color: $color-gray-7;
+      //       button {
+      //         box-shadow: none;
+      //         color: $color-white-0;
+      //         display: flex;
+      //         justify-content: space-between;
+      //       }
+      //     }
+      //     .card-body {
+      //       padding: 0;
+      //       position: relative;
+      //       height: 0;
+      //       border-top: 1px solid #484646;
+      //       overflow: hidden;
+      //       transition: 0.2s;
+      //       padding: 0 30px;
+      //       .card-content {
+      //         color: #a7a7a7;
+      //       }
+      //     }
+      //   }
+      // }
+      //
+      .accordion {
+        .card {
+          border: none;
+          border-bottom: 1px solid #484646;
+
           .card-header {
             background-color: $color-gray-7;
-            button {
-              box-shadow: none;
-              color: $color-white-0;
-              display: flex;
-              justify-content: space-between;
+            border-bottom: 1px solid #484646;
+            h2 {
+              button {
+                box-shadow: none;
+                color: $color-white-0;
+                display: flex;
+                flex: row;
+                justify-content: space-between;
+                //   span{
+
+                //   }
+                //   i{
+
+                //   }
+                // }
+              }
             }
           }
-          .card-body {
-            padding: 0;
-            position: relative;
-            height: 0;
-            border-top: 1px solid #484646;
-            overflow: hidden;
-            transition: 0.2s;
-            padding: 0 30px;
-            .card-content {
-              color: #a7a7a7;
+          .collapse {
+            .card-body {
+              padding: 20px;
+              // background-color: #242424;
+              ul {
+                li {
+                  cursor: pointer;
+
+                  a {
+                    text-decoration: none;
+                    color: #a7a7a7;
+                  }
+                  &:hover a {
+                    color: $color-white-0;
+                  }
+                }
+              }
             }
           }
         }
@@ -375,12 +431,73 @@ footer {
   }
 }
 
+.accordion {
+  .card {
+    .card-header {
+      h2 {
+        button {
+          box-shadow: none;
+        }
+      }
+    }
+    .collapse {
+      ul {
+        // list-style: none;
+        li {
+        }
+      }
+    }
+  }
+}
+
+//
 .container-fluid {
   padding-left: 95px;
   padding-right: 95px;
 }
-//responsive(max-width)
-@include responsive("large") {
+// @media (min-width: 992px){
+
+// }
+// @include responsive("large") {
+@media (max-width: 1439px) {
+  .container-fluid {
+    padding: 0 45px;
+  }
+}
+@media (max-width: 1023px) {
+  footer {
+    .footer__secondary {
+      padding: 70px 0;
+      .footer__share {
+        // position: relative;
+        .footer__update {
+          ul {
+            display: block;
+            .comment-card {
+              padding: 40px 0 0 40px;
+            }
+          }
+        }
+        .social-links {
+          position: relative;
+          // top: 0;
+          // right: 0;
+          flex-direction: column;
+          // align-items: unset;
+          p {
+            position: absolute;
+            top: -46px;
+            left: -7px;
+          }
+          ul {
+            // margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
   .footer__main {
     .footer__content {
       .finance,
@@ -390,13 +507,135 @@ footer {
       }
     }
   }
+  .comment-card {
+    display: none;
+  }
+  .container-fluid {
+    padding: 0 30px;
+  }
 }
-@include responsive("medium") {
+// }
+// @include responsive("medium") {
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 25px;
+  }
+  .input-group {
+    display: none;
+  }
+  .search {
+    .search__content {
+      ul {
+        margin-left: 0;
+      }
+    }
+  }
+  footer {
+    .footer__secondary {
+      padding: 40px 0 70px;
+      .footer__share {
+        // position: relative;
+        flex-direction: column;
+        .footer__update {
+          ul {
+            .get {
+              padding: 20px 0;
+              // border: 1px solid;
+              border-bottom: 1px solid #948e8e;
+              a {
+                text-decoration: none;
+                .icon {
+                  font-size: 15px;
+                  padding: 7px;
+                }
+                .text {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            display: block;
+            .comment-card {
+              padding: 40px 0 0 40px;
+            }
+          }
+        }
+        .social-links {
+          position: relative;
+          margin-top: 60px;
+
+          flex-direction: column;
+          p {
+            position: absolute;
+            top: -40px;
+            left: 0px;
+          }
+          ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            // margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
   .footer__main {
     .footer__content {
       .shoppings {
         display: none;
       }
+      .vehicle {
+        .vehicle-detail {
+          padding-left: 30px;
+          // &::before {
+          //   content: "";
+          //   height: 1px;
+          //   width: 100%;
+          //   display: block;
+          //   // color: #f7f7f7;
+          //   background-color: #fff;
+          // }
+          border-top: 1px solid #484646;
+        }
+      }
     }
   }
+  footer {
+    .footer__last {
+      padding: 30px 0 70px;
+      .container-fluid {
+        position: relative;
+        .change {
+          .img--ford {
+            position: absolute;
+            bottom: -65px;
+            left: 22px;
+          }
+        }
+        .motor {
+          .company {
+            a {
+              padding-left: 15px;
+            }
+            padding-top: 30px;
+          }
+          ul {
+            li {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 479px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+.disclosure .disclosure__airbag h2 span {
+  font-size: 35px;
 }
