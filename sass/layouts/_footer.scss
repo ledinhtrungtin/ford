@@ -168,25 +168,25 @@ footer {
               }
             }
           }
-          .collapse {
-            .card-body {
-              padding: 20px;
-              // background-color: #242424;
-              ul {
-                li {
-                  cursor: pointer;
+          // .collapse {
+          .card-body {
+            padding: 20px;
+            // background-color: #242424;
+            ul {
+              li {
+                cursor: pointer;
 
-                  a {
-                    text-decoration: none;
-                    color: #a7a7a7;
-                  }
-                  &:hover a {
-                    color: $color-white-0;
-                  }
+                a {
+                  text-decoration: none;
+                  color: #a7a7a7;
+                }
+                &:hover a {
+                  color: $color-white-0;
                 }
               }
             }
           }
+          // }
         }
       }
     }
@@ -363,9 +363,9 @@ footer {
             top: -46px;
             left: -7px;
           }
-          ul {
-            // margin-top: 50px;
-          }
+          // ul {
+          //   // margin-top: 50px;
+          // }
         }
       }
     }

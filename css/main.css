@@ -162,20 +162,20 @@ footer .footer__main .footer__content .accordion .card .card-header h2 button {
           justify-content: space-between;
 }
 
-footer .footer__main .footer__content .accordion .card .collapse .card-body {
+footer .footer__main .footer__content .accordion .card .card-body {
   padding: 20px;
 }
 
-footer .footer__main .footer__content .accordion .card .collapse .card-body ul li {
+footer .footer__main .footer__content .accordion .card .card-body ul li {
   cursor: pointer;
 }
 
-footer .footer__main .footer__content .accordion .card .collapse .card-body ul li a {
+footer .footer__main .footer__content .accordion .card .card-body ul li a {
   text-decoration: none;
   color: #a7a7a7;
 }
 
-footer .footer__main .footer__content .accordion .card .collapse .card-body ul li:hover a {
+footer .footer__main .footer__content .accordion .card .card-body ul li:hover a {
   color: #fff;
 }
 
