@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -15,48 +16,68 @@ header {
   position: fixed;
   background-color: #fff;
   width: 100%;
-  z-index: 999;
+  z-index: 9;
   transition: all 0.5s;
 }
-header .topnav {
+header .eyebrow .topnav {
   background-color: #f3f3f3;
-  padding: 5px 30px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1440px;
+  margin: 0;
   z-index: 999;
 }
-header .topnav .topnav__item .item__logo {
+header .eyebrow .topnav .topnav__item {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+header .eyebrow .topnav .topnav__item .item__logo {
   height: 30px;
   width: 50px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-header .topnav .topnav__item span {
+header .eyebrow .topnav .topnav__item span {
   font-size: 12px;
   color: #102b4e;
   border-right: 1px solid;
   padding-right: 10px;
 }
 header .nav {
-  padding: 10px 30px;
+  display: flex;
+  max-width: 1440px;
+  margin: 0;
+  flex-direction: row;
+  justify-content: space-between;
   z-index: 999;
   background-color: #fff;
 }
-header .nav .nav__logo {
+header .nav .nav__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .nav .nav__list .list__item {
+  font-size: 13px;
+  padding: 10px 10px;
+  color: #0276b3;
+  font-weight: 600;
+  cursor: pointer;
+}
+header .nav .nav__list .list__item.listActive {
+  border-bottom: 2px solid;
+}
+header .nav .nav__list .list__item.img {
+  padding: 0;
+}
+header .nav .nav__list .nav__logo {
   width: 150px;
   height: 50px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-header .nav .nav__list .list__item {
-  font-size: 14px;
-  padding: 10px 10px;
-  color: #0276b3;
-  font-weight: bold;
-  cursor: pointer;
-}
-header .nav .nav__list .list__item.listActive {
-  border-bottom: 2px solid;
 }
 header .list__listCar {
   position: absolute;
@@ -67,8 +88,10 @@ header .list__listCar {
   background-color: #fff;
   z-index: -1;
   transition: all 0.5s;
+  overflow-x: hidden;
 }
 header .list__listCar .listCar {
+  overflow-y: scroll;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -101,102 +124,19 @@ header .list__listCar .listCar .car__item .car__option {
   color: #007791;
   border-bottom: 1px solid;
 }
-
-.banner {
-  position: relative;
-}
-.banner .banner__img {
-  background-image: url(/img/banner/anh2.png);
-  width: 100%;
-  height: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  justify-content: center;
-}
-.banner .banner__content {
-  top: 0;
-  padding-left: 100px;
+header .list__listCar .listCar .car__btn {
   position: absolute;
-  color: white;
-}
-.banner .banner__content h1 {
-  margin-top: 150px;
-  margin-bottom: 50px;
+  bottom: 0;
 }
 
-.disclosure {
-  background-color: #f7f7f7;
+@media (max-width: 1199px) {
+  header .nav .nav__list .list__item {
+    padding: 10px 5px;
+  }
+  header .nav .nav__list .list__item.account {
+    display: none;
+  }
 }
-.disclosure .disclosure__airbag h2 {
-  color: #d92e14;
-  font-weight: 600;
-}
-.disclosure .disclosure__airbag button {
-  background-color: #d92e14;
-  color: #fff;
-  padding: 12px 80px;
-  border: 1px solid #d92e14;
-  border-radius: 1px;
-  transition: 0.05s;
-}
-.disclosure .disclosure__airbag button:hover {
-  background-color: #fff;
-  color: #d92e14;
-  border-color: #d92e14;
-}
-.disclosure .accordion {
-  position: relative;
-}
-.disclosure .accordion .accordion__header {
-  padding: 23px 10px;
-  background-color: #fff;
-}
-.disclosure .accordion .accordion__header button span {
-  font-size: 14px;
-  color: #0276b3;
-}
-.disclosure .accordion .accordion__header button span i {
-  margin-left: 10px;
-  font-size: 14px;
-  transition: 0.3s;
-}
-.disclosure .accordion .accordion__header button:focus {
-  box-shadow: none;
-  border-color: #0276b3;
-  padding: 7px 0;
-  border-radius: 0;
-  transition: 0s;
-}
-.disclosure .accordion .accordion__header button:hover {
-  border-color: #fff;
-}
-.disclosure .accordion .accordion__body {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-  transition: 0.2s;
-}
-.disclosure .accordion .accordion__body .body__content {
-  font-size: 12px;
-  padding: 80px 100px;
-  background-color: #f7f7f7;
-}
-.disclosure .accordion.active .accordion__header button i {
-  transform: rotate(180deg);
-}
-.disclosure .accordion.active .accordion__body {
-  height: 200px;
-  overflow-y: scroll;
-}
-.disclosure .accordion.active .accordion__body::-webkit-scrollbar {
-  width: 10px;
-  background: lightgray;
-}
-.disclosure .accordion.active .accordion__body::-webkit-scrollbar-thumb {
-  background-color: grey;
-}
-
 footer .footer__resdident {
   padding: 40px 0 20px;
   background-color: #092a46;
@@ -246,9 +186,11 @@ footer .search .search__content .input-group span {
 footer .search .search__content .input-group input {
   border: none;
   background: transparent;
+  color: white;
+  font-size: 25px;
   outline: none;
   width: 280px;
-  padding: 11px 5px 5px 40px;
+  padding: 2px 0 5px 40px;
 }
 footer .search .search__content .input-group input::-webkit-input-placeholder {
   font-size: 26px;
@@ -281,7 +223,7 @@ footer .footer__main .footer__content .item h5 {
   color: #fff;
 }
 footer .footer__main .footer__content .item ul {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 footer .footer__main .footer__content .item ul li a {
   text-decoration: none;
@@ -291,35 +233,33 @@ footer .footer__main .footer__content .item ul li a {
 footer .footer__main .footer__content .item ul li a:hover {
   color: #fff;
 }
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header {
-  border: 1px solid #0276b3;
+footer .footer__main .footer__content .accordion .card {
+  border: none;
+  border-bottom: 1px solid #484646;
 }
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-header:hover {
-  border: 1px solid #242424;
-}
-footer .footer__main .footer__content .footer__accordion .footer-card.active .card-body {
-  height: 70px;
-}
-footer .footer__main .footer__content .footer__accordion .footer-card .card-header {
+footer .footer__main .footer__content .accordion .card .card-header {
   background-color: #242424;
+  border-bottom: 1px solid #484646;
 }
-footer .footer__main .footer__content .footer__accordion .footer-card .card-header button {
+footer .footer__main .footer__content .accordion .card .card-header h2 button {
   box-shadow: none;
   color: #fff;
   display: flex;
+  flex: row;
   justify-content: space-between;
 }
-footer .footer__main .footer__content .footer__accordion .footer-card .card-body {
-  padding: 0;
-  position: relative;
-  height: 0;
-  border-top: 1px solid #484646;
-  overflow: hidden;
-  transition: 0.2s;
-  padding: 0 30px;
+footer .footer__main .footer__content .accordion .card .card-body {
+  padding: 20px;
 }
-footer .footer__main .footer__content .footer__accordion .footer-card .card-body .card-content {
+footer .footer__main .footer__content .accordion .card .card-body ul li {
+  cursor: pointer;
+}
+footer .footer__main .footer__content .accordion .card .card-body ul li a {
+  text-decoration: none;
   color: #a7a7a7;
+}
+footer .footer__main .footer__content .accordion .card .card-body ul li:hover a {
+  color: #fff;
 }
 footer .footer__secondary {
   background-color: #102b4e;
@@ -445,20 +385,486 @@ footer .footer__last .motor ul .evidon a img {
   left: 6px;
 }
 
-.container-fluid {
-  padding-left: 95px;
-  padding-right: 95px;
+@media (max-width: 1023px) {
+  footer .footer__secondary {
+    padding: 70px 0;
+  }
+  footer .footer__secondary .footer__share .footer__update ul {
+    display: block;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .comment-card {
+    padding: 40px 0 0 40px;
+  }
+  footer .footer__secondary .footer__share .social-links {
+    position: relative;
+    flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .social-links p {
+    position: absolute;
+    top: -46px;
+    left: -7px;
+  }
 }
-
-@media screen and (max-width: 991px) {
+@media (max-width: 991px) {
   .footer__main .footer__content .finance,
 .footer__main .footer__content .owner,
 .footer__main .footer__content .experience {
     display: none;
   }
+
+  .comment-card {
+    display: none;
+  }
 }
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
+  .input-group {
+    display: none;
+  }
+
+  .search .search__content ul {
+    margin-left: 0;
+  }
+
+  footer .footer__secondary {
+    padding: 40px 0 70px;
+  }
+  footer .footer__secondary .footer__share {
+    flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .footer__update ul {
+    display: block;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get {
+    padding: 20px 0;
+    border-bottom: 1px solid #948e8e;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a {
+    text-decoration: none;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a .icon {
+    font-size: 15px;
+    padding: 7px;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .get a .text {
+    font-size: 15px;
+  }
+  footer .footer__secondary .footer__share .footer__update ul .comment-card {
+    padding: 40px 0 0 40px;
+  }
+  footer .footer__secondary .footer__share .social-links {
+    position: relative;
+    margin-top: 60px;
+    flex-direction: column;
+  }
+  footer .footer__secondary .footer__share .social-links p {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+  }
+  footer .footer__secondary .footer__share .social-links ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .footer__main .footer__content .shoppings {
     display: none;
   }
+  .footer__main .footer__content .vehicle .vehicle-detail {
+    padding-left: 30px;
+    border-top: 1px solid #484646;
+  }
+
+  footer .footer__last {
+    padding: 30px 0 70px;
+  }
+  footer .footer__last .container-fluid {
+    position: relative;
+  }
+  footer .footer__last .container-fluid .change .img--ford {
+    position: absolute;
+    bottom: -65px;
+    left: 22px;
+  }
+  footer .footer__last .container-fluid .motor .company {
+    padding-top: 30px;
+  }
+  footer .footer__last .container-fluid .motor .company a {
+    padding-left: 15px;
+  }
+  footer .footer__last .container-fluid .motor ul li {
+    display: block;
+  }
+}
+.banner .banner__img {
+  background-image: url(/img/banner/anh2.png);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+}
+.banner .banner__content {
+  top: 0;
+  padding-left: 100px;
+  position: absolute;
+  color: white;
+}
+.banner .banner__content h1 {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.banner {
+  background-color: white;
+  background-image: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blog__title1 {
+  text-align: center;
+  color: #333;
+}
+
+.car {
+  background-image: url(./img/grid/bog__title.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.blog__title1 h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 2px;
+  padding-top: 20px;
+}
+
+.blog__title1 p {
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.blog__title1 button {
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
+  background-color: #337ab7;
+  border: 1px solid #2e6da4;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.blog__title1 button:hover {
+  color: #337ab7;
+  background-color: #fff;
+  border: 1px solid #2e6da4;
+}
+
+.blog__title {
+  text-align: center;
+  background-image: url(./img/letus.png);
+  height: 217.5px;
+}
+
+.blog__wap {
+  display: block;
+  color: white;
+  box-sizing: border-box;
+  height: 137.5px;
+  text-align: center;
+  /* position: relative; */
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.blog__wap h1 {
+  font-size: 3rem;
+  height: 137.5px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.blog__wap p {
+  height: 48px;
+  width: 186px;
+  padding-left: 548px;
+  padding-right: 548px;
+  padding-top: 30px;
+}
+
+.blog__wap i:hover {
+  background-color: white;
+}
+
+.blog__be {
+  width: 290;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.blog__it {
+  position: relative;
+  /* ẩn những nội dung bị tràn ra ngoài */
+  overflow: hidden;
+}
+
+.blog__metro {
+  grid-column: 1/span 3;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.blog__metro p {
+  margin-top: 40px;
+}
+
+.blog__note {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.blog__note p {
+  background-color: #337ab7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog__it img {
+  width: 100%;
+  height: 100%;
+  /* filter: grayscale(40%) contrast(50%); */
+  transition: all 0.5s;
+}
+
+.blog__it:hover img {
+  filter: grayscale(0) contrast(100%);
+  transform: scale(1.2);
+}
+
+.blog__it i {
+  margin-left: 150px;
+}
+
+.blog__it i:hover {
+  background-color: #fff;
+}
+
+.blog__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* margin-top: 30px; */
+  background-color: #f7f7f7;
+}
+
+.blog__item {
+  position: relative;
+  /* ẩn những nội dung bị tràn ra ngoài */
+  overflow: hidden;
+}
+
+.blog__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  /* padding-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.blog__text h3 {
+  font-size: 1rem;
+  background-color: #337ab7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog__text h4 {
+  font-size: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #337ab7;
+}
+
+.blog__item img {
+  width: 100%;
+  height: 100%;
+  /* filter: grayscale(40%) contrast(50%); */
+  transition: all 0.5s;
+}
+
+.blog__item:hover img {
+  filter: grayscale(0) contrast(100%);
+  transform: scale(1.2);
+}
+
+.blog__item i {
+  margin-left: 30px;
+}
+
+.blog__item i:hover {
+  background-color: #fff;
+}
+
+.blog__metro1 {
+  /* Bắt đầu từ line số 1 và gom 2 cột */
+  grid-column: 1/span 2;
+  grid-row: 1/span 2;
+}
+
+.blog__title3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 265px;
+  background-color: #f7f7f7;
+}
+
+.blog__title3 h1 {
+  padding-top: 40px;
+  font-size: 3rem;
+  color: #d92e14;
+}
+
+.blog__title3 button {
+  box-sizing: border-box;
+  background-color: #d92e14;
+  border: 1px solid red;
+  cursor: pointer;
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  color: #fff;
+}
+
+.blog__title3 button:hover {
+  background-color: #fff;
+  color: #d92e14;
+}
+
+.disclosure {
+  background-color: #f7f7f7;
+}
+.disclosure .disclosure__airbag h2 span {
+  color: #d92e14;
+  font-size: 3.3rem;
+}
+.disclosure .disclosure__airbag button {
+  background-color: #d92e14;
+  color: #fff;
+  padding: 12px 80px;
+  border: 1px solid #d92e14;
+  border-radius: 1px;
+  transition: 0.05s;
+}
+.disclosure .disclosure__airbag button:hover {
+  background-color: #fff;
+  color: #d92e14;
+  border-color: #d92e14;
+}
+.disclosure .accordion {
+  cursor: pointer;
+  position: relative;
+}
+.disclosure .accordion .accordion__header {
+  padding: 23px 10px;
+  background-color: #fff;
+}
+.disclosure .accordion .accordion__header button span {
+  font-size: 14px;
+  color: #0276b3;
+}
+.disclosure .accordion .accordion__header button span i {
+  margin-left: 10px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.disclosure .accordion .accordion__header button:focus {
+  box-shadow: none;
+  border-color: #0276b3;
+  padding: 7px 0;
+  border-radius: 0;
+  transition: 0s;
+}
+.disclosure .accordion .accordion__header button:hover {
+  border-color: #fff;
+}
+.disclosure .accordion .accordion__body {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.disclosure .accordion .accordion__body .body__content {
+  font-size: 12px;
+  padding: 80px 100px;
+  background-color: #f7f7f7;
+}
+.disclosure .accordion.active .accordion__header button i {
+  transform: rotate(180deg);
+}
+.disclosure .accordion.active .accordion__body {
+  height: 200px;
+  overflow-y: scroll;
+}
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar {
+  width: 10px;
+  background: lightgray;
+}
+.disclosure .accordion.active .accordion__body::-webkit-scrollbar-thumb {
+  background-color: grey;
+}
+
+.container-fluid {
+  padding-left: 95px;
+  padding-right: 95px;
+}
+
+@media (max-width: 1439px) {
+  .container-fluid {
+    padding: 0 45px;
+  }
+}
+@media (max-width: 991px) {
+  .container-fluid {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 25px;
+  }
+}
+@media (max-width: 479px) {
+  .container-fluid {
+    padding: 0 15px;
+  }
+}
+.disclosure .disclosure__airbag h2 span {
+  font-size: 35px;
 }
